@@ -2,12 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import {BrowserRouter} from 'react-router-dom'
 
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {configureStore} from '@reduxjs/toolkit';
-// import{Provider} from 'react-redux';
+import { configureStore } from '@reduxjs/toolkit';
+import { Provider } from 'react-redux';
+import { store } from './app/Store'
+
 // import counterReducer from './components/Redux/Counter'
 // import teachSlice from './components/Redux/TeacherSlice'
 
@@ -22,11 +23,13 @@ import {configureStore} from '@reduxjs/toolkit';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-      <BrowserRouter>
-          
-          <App />
+      <Provider store={store}>
+        <App />
 
-      </BrowserRouter>
+
+
+
+      </Provider>
   </React.StrictMode>
 );
 

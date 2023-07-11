@@ -32,12 +32,12 @@ const home = () => {
                   </ul>
                   <form className="d-flex w-50" role="search">
                     <input className="form-control me-4 w-75" type="search" placeholder="Search" aria-label="Search" />
-                    <button className="btn btn-outline-warning border border-dark me-5"><Link className='text-decoration-none text-dark ' to='/signup'>Signup</Link></button>
+                    <button className="btn btn-outline-warning border border-dark me-5"><Link className='text-decoration-none text-dark ' to='/adreg'>Signup</Link></button>
                   </form>
 
                 </div>
                 <div className="navbar-nav me-auto pe-5 mb-2 mb-lg-0">
-                    <h6 className="nav-item"><Link className='text-decoration-none' to='/login'>Login</Link></h6>
+                    <h6 className="nav-item"><Link className='text-decoration-none' to='/adlog'>Login</Link></h6>
                 </div>
               </div>
             </nav>

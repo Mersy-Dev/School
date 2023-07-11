@@ -151,7 +151,18 @@ textarea{
 .table-primary{
     width: 950px;
 }
+.user{
+    width: 150px;
+    height: 170px;
+    margin-top: 40px ;
+    margin-left: 20px;
+    text-align: center;
+}
 
+.holder{
+    height: 250px;
+    margin-left: 30vw;
+}
 .tech:hover{
     background-color: azure;
 }
