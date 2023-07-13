@@ -116,13 +116,19 @@ const deleteTeacher = async (req, res) => {
     const teacherId = req.params.id
 
     try {
-        await teacherModel.findByIdAndDelete(teacherId);
-        res.sendStatus(204)
+       const currteach = await teacherModel.findByIdAndDelete(teacherId);
+        // res.sendStatus(204)
+        if(!currteach){
+            return res.status(404).json({message:`cannot find any teacher with this ID ${teacherId}`})
+        }res.status(200).json(currteach)
     } catch (error) {
         console.error(error);
         res.sendStatus(500)
     }
 }
+
+
+
 const createStudent = async (req, res) => {
     try {
         const newStudent = new studentModel(req.body);

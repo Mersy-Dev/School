@@ -1,8 +1,8 @@
 import { React, useEffect, useState } from 'react'
-import BodyNav from '../../Navbar/BodyNav'
+import BodyNav from '../Navbar/BodyNav'
 import { Link, useNavigate } from 'react-router-dom';
 import axios from "axios";
-import '../../Body/home.css'
+import '../home.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 
@@ -23,8 +23,9 @@ const TeacersPage = () => {
         })
     }, [])
 
-    const getUpdaTeach = () =>{
-        
+    const loadTeach = async() =>{
+        const loaded = await axios.get('http://localhost:5500/users/getTeach');
+        setGetAll(loaded.data);
     }
 
     const deleteData = (id) =>{
@@ -33,7 +34,7 @@ const TeacersPage = () => {
             axios.delete(`http://localhost:5500/users/deletTeach/${id}`).then(response =>{
                 alert("Teacher Deleted")
                 console.log(response)
-                Navigate("/teachers_page")
+                loadTeach()
                 return
 
             }).catch(error=>{
@@ -60,7 +61,7 @@ const TeacersPage = () => {
 
                     </div>
                     <div className="navbar-nav me-auto pe-5 mb-2 mb-lg-0">
-                        <h6 className="nav-item"><Link className='text-decoration-none' to='/login'>Logout</Link></h6>
+                        <h6 className="nav-item"><Link className='text-decoration-none' to='/adlog'>Logout</Link></h6>
                     </div>
                 </div>
             </nav>

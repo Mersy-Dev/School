@@ -8,6 +8,8 @@ const dotenv = require('dotenv').config();
 
 const app = express();
 const userRoutes = require("./routes/userRoutes")
+const studRoutes = require("./routes/studRoutes")
+
 
 const connectDB = require('./config/db');
 
@@ -17,6 +19,8 @@ app.use(express.json());
 app.use(cors({origin:"*"}))
 
 app.use("/users", userRoutes);
+app.use("/student", studRoutes);
+
 connectDB();
 
 

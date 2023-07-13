@@ -4,18 +4,25 @@ const mongoose = require("mongoose");
 
 
 
-const studentSchema = new mongoose.Schema({ 
-    firstName:String,
-    lastName:String,
-    email:{type:String, unique:true, required:true},
-    password:String,
-    address:String,
-    nationalty:String,
-    courses:{
-        
-    },
+const studentSchema = new mongoose.Schema({
+    // _id: {
+    //     type: String,
+    //     default: () => mongoose.Types.ObjectId().toString()
+    // },
+    firstName: String,
+    lastName: String,
+    userName: String,
+    email: { required: true, type: String, unique: true },
+    password: String,
+    address: String,
+    address2: { required: true, type: String },
+    city: { required: true, type: String },
+    phone: { required: true, type: Number },
+    zip: {
+        required: true, type: Number
 
- 
+    }
+
 
 },
 
@@ -26,4 +33,4 @@ const studentSchema = new mongoose.Schema({
 
 let studentModel = mongoose.models.student_tbs || mongoose.model("student_tbs", studentSchema);
 
-module.exports =  studentModel
+module.exports = studentModel

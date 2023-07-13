@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import { useFormik } from 'formik';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import BodyNav from '../../Navbar/BodyNav';
 import axios from 'axios';
-import * as yup from 'yup';
-import '../../Body/home.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import '../home.css'
 import { } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -71,7 +68,7 @@ const EditTeach = () => {
 
                     </div>
                     <div className="navbar-nav me-auto pe-5 mb-2 mb-lg-0">
-                        <h6 className="nav-item"><Link className='text-decoration-none' to='/login'>Logout</Link></h6>
+                        <h6 className="nav-item"><Link className='text-decoration-none' to='/adlog'>Logout</Link></h6>
                     </div>
                 </div>
             </nav>

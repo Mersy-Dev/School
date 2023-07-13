@@ -39,7 +39,7 @@ const AdminDashboard = () => {
 
           </div>
           <div className="navbar-nav me-auto pe-5 mb-2 mb-lg-0">
-            <h6 className="nav-item"><Link className='text-decoration-none' to='/'  >Logout</Link></h6>
+            <h6 className="nav-item"><Link className='text-decoration-none' to='/adlog'  >Logout</Link></h6>
           </div>
         </div>
       </nav>
@@ -48,7 +48,7 @@ const AdminDashboard = () => {
         <div className="container text-center">
           <div className="row row-cols-5">
             <a className='col btn btn-dark m-2 py-3' href="/teachers_page"><FontAwesomeIcon className='ico' icon={faUserTie} /> <br /> Teachers </a>
-            <a className='col btn btn-dark m-2 py-3' href=""><FontAwesomeIcon className='ico' icon={faUserGraduate} /> <br /> Student </a>
+            <a className='col btn btn-dark m-2 py-3' href="/stud_page"><FontAwesomeIcon className='ico' icon={faUserGraduate} /> <br /> Student </a>
             <a className='col btn btn-dark m-2 py-3' href=""><FontAwesomeIcon className='ico' icon={faPencil} /> <br /> Registrar Office </a>
             <a className='col btn btn-dark m-2 py-3' href=""><FontAwesomeIcon className='ico' icon={faCubes} /> <br /> Classes </a>
             <a className='col btn btn-dark m-2 py-3' href=""><FontAwesomeIcon className='ico' icon={faColumns} /> <br /> Sections </a>
@@ -56,7 +56,7 @@ const AdminDashboard = () => {
             <a className='col btn btn-dark m-2 py-3' href=""><FontAwesomeIcon className='ico' icon={faBookOpen} /> <br /> Courses </a>
             <a className='col btn btn-dark m-2 py-3' href=""><FontAwesomeIcon className='ico' icon={faEnvelope} /> <br /> Messages </a>
             <a className='col btn btn-primary m-2 py-3 col-5' href=""><FontAwesomeIcon className='ico' icon={faCogs} /> <br /> Settings </a>
-            <Link className='col btn btn-warning m-2 py-3 col-5 text-decoration-none'  onClick={onLogout} ><FontAwesomeIcon className='ico' icon={faSignOut} /> <br />Logout</Link>
+            <Link className='col btn btn-warning m-2 py-3 col-5 text-decoration-none'   onClick={onLogout} ><FontAwesomeIcon className='ico' icon={faSignOut} /> <br />Logout</Link>
 
 
 

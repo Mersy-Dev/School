@@ -13,7 +13,6 @@ userRoutes.get("/editTeach/:id", editUpTeachers)
 userRoutes.put("/editTeach/:id", editUpTeachers)
 userRoutes.delete("/deletTeach/:id", deleteTeacher)
 
-userRoutes.post("/creatStd", createStudent);
 
 
 module.exports = userRoutes
